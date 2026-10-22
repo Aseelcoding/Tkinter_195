@@ -68,6 +68,13 @@ def main():
     )
     result_label.pack(pady=10)
 
+    footer = ttk.Label(
+        root,
+        text="Prediksi ini hanya menampilkan program studi Teknologi Informasi.",
+        font=("Arial", 9),
+    )
+    footer.pack(pady=(0, 10))
+
     root.mainloop()
 
 
