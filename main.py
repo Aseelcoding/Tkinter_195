@@ -8,6 +8,9 @@ def main():
     root.geometry("600x680")
     root.minsize(500, 630)
 
+    def prediksi_prodi():
+        result_label.config(text="Program Studi: Information Technology")
+
     judul = ttk.Label(
         root,
         text="Aplikasi Prediksi Prodi Pilihan",
@@ -71,6 +74,7 @@ def main():
     prediction_button = ttk.Button(
         root,
         text="Prediction Results",
+        command=prediksi_prodi,
     )
     prediction_button.pack(pady=10)
 
