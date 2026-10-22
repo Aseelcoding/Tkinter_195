@@ -5,11 +5,16 @@ from tkinter import ttk
 def main():
     root = tk.Tk()
     root.title("Aplikasi Prediksi Prodi Pilihan")
-    root.geometry("850x480")
-    root.minsize(750, 430)
+    root.geometry("850x520")
+    root.minsize(750, 470)
 
     def prediksi_prodi():
         result_label.config(text="Program Studi: Information Technology")
+
+    def hapus_input():
+        for entry in entries:
+            entry.delete(0, tk.END)
+        result_label.config(text="Hasil prediksi akan ditampilkan di sini.")
 
     judul = ttk.Label(
         root,
@@ -54,12 +59,22 @@ def main():
         )
         entries.append(entry)
 
+    button_frame = ttk.Frame(root)
+    button_frame.pack(pady=5)
+
     prediction_button = ttk.Button(
-        root,
+        button_frame,
         text="Prediction Results",
         command=prediksi_prodi,
     )
-    prediction_button.pack(pady=10)
+    prediction_button.grid(row=0, column=0, padx=5)
+
+    clear_button = ttk.Button(
+        button_frame,
+        text="Clear Inputs",
+        command=hapus_input,
+    )
+    clear_button.grid(row=0, column=1, padx=5)
 
     result_label = ttk.Label(
         root,
