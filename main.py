@@ -15,6 +15,9 @@ def main():
     )
     judul.pack(pady=20)
 
+    input_frame = ttk.Frame(root, padding=10)
+    input_frame.pack(pady=10)
+
     root.mainloop()
 
 
