@@ -5,8 +5,8 @@ from tkinter import ttk
 def main():
     root = tk.Tk()
     root.title("Aplikasi Prediksi Prodi Pilihan")
-    root.geometry("850x450")
-    root.minsize(750, 400)
+    root.geometry("850x480")
+    root.minsize(750, 430)
 
     def prediksi_prodi():
         result_label.config(text="Program Studi: Information Technology")
@@ -16,7 +16,13 @@ def main():
         text="Aplikasi Prediksi Prodi Pilihan",
         font=("Arial", 16, "bold"),
     )
-    judul.pack(pady=20)
+    judul.pack(pady=(20, 5))
+
+    petunjuk = ttk.Label(
+        root,
+        text="Masukkan nilai untuk 10 mata pelajaran, lalu klik Prediction Results.",
+    )
+    petunjuk.pack(pady=5)
 
     input_frame = ttk.Frame(root, padding=10)
     input_frame.pack(pady=10)
