@@ -5,8 +5,8 @@ from tkinter import ttk
 def main():
     root = tk.Tk()
     root.title("Aplikasi Prediksi Prodi Pilihan")
-    root.geometry("600x650")
-    root.minsize(500, 600)
+    root.geometry("600x680")
+    root.minsize(500, 630)
 
     judul = ttk.Label(
         root,
@@ -73,6 +73,13 @@ def main():
         text="Prediction Results",
     )
     prediction_button.pack(pady=10)
+
+    result_label = ttk.Label(
+        root,
+        text="Hasil prediksi akan ditampilkan di sini.",
+        font=("Arial", 11, "bold"),
+    )
+    result_label.pack(pady=10)
 
     root.mainloop()
 
