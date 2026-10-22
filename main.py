@@ -18,6 +18,15 @@ def main():
     input_frame = ttk.Frame(root, padding=10)
     input_frame.pack(pady=10)
 
+    mata_pelajaran = ttk.Label(
+        input_frame,
+        text="Nilai Mata Pelajaran 1:",
+    )
+    mata_pelajaran.grid(row=0, column=0, sticky="w", pady=5, padx=10)
+
+    entry = ttk.Entry(input_frame, width=20)
+    entry.grid(row=0, column=1, pady=5)
+
     root.mainloop()
 
 
