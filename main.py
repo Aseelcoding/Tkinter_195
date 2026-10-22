@@ -34,6 +34,24 @@ def main():
         subject_entry = tk.Entry(subjects_frame, width=18, font=("Arial", 11))
         subject_entry.grid(row=row, column=column + 1, padx=8, pady=8)
 
+    prediction_button = tk.Button(
+        root,
+        text="Prediction Results",
+        font=("Arial", 12, "bold"),
+        padx=16,
+        pady=8,
+    )
+    prediction_button.pack(pady=(12, 8))
+
+    result_label = tk.Label(
+        root,
+        text="Prediction result will appear here.",
+        font=("Arial", 12),
+        fg="darkblue",
+        pady=10,
+    )
+    result_label.pack()
+
     root.mainloop()
 
 
