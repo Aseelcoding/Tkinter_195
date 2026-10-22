@@ -44,7 +44,7 @@ def main():
             row=baris,
             column=kolom_grup + 1,
             pady=7,
-            padx=(0, 0) if nomor == 10 else (0, 15),
+            padx=(0, 15),
         )
         entries.append(entry)
 
