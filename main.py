@@ -5,8 +5,8 @@ from tkinter import ttk
 def main():
     root = tk.Tk()
     root.title("Aplikasi Prediksi Prodi Pilihan")
-    root.geometry("600x600")
-    root.minsize(500, 550)
+    root.geometry("600x650")
+    root.minsize(500, 600)
 
     judul = ttk.Label(
         root,
@@ -67,6 +67,12 @@ def main():
     mata_pelajaran_10.grid(row=9, column=0, sticky="w", pady=5, padx=10)
     entry_10 = ttk.Entry(input_frame, width=20)
     entry_10.grid(row=9, column=1, pady=5)
+
+    prediction_button = ttk.Button(
+        root,
+        text="Prediction Results",
+    )
+    prediction_button.pack(pady=10)
 
     root.mainloop()
 
